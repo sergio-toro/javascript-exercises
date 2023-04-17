@@ -1,6 +1,5 @@
 function callTheOtherFunction(callback, message) {
-  const message = "";
-  callback(message);
+  return callback(message);
 }
 
 const result = callTheOtherFunction(
