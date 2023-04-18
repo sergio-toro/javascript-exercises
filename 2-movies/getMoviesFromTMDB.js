@@ -2,7 +2,7 @@ export default async function getMoviesFromTMDB() {
   const API_KEY = import.meta.env.VITE_API_KEY;
 
   const resp = await fetch(`
-      https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&limit=3&api_key=
+      https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&limit=3&api_key=${API_KEY}
       `);
   const jsonData = await resp.json();
   const finalData = [];

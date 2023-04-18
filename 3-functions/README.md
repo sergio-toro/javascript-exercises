@@ -18,12 +18,12 @@ You are given an array of objects representing items in an order. Each object ha
 const order1 = [
   { name: "apple", price: 0.5 },
   { name: "banana", price: 0.25 },
-  { name: "orange", price: 0.75 }
+  { name: "orange", price: 0.75 },
 ];
 
 const order2 = [
   { name: "pizza", price: 9.99 },
-  { name: "soda", price: 1.99 }
+  { name: "soda", price: 1.99 },
 ];
 ```
 
@@ -35,6 +35,7 @@ calculateTotalPrice(order2); // 11.98
 ```
 
 ## 2. Sum even numbers
+
 In this exercise:
 
 - An array is used to store a list of numbers.
@@ -60,6 +61,7 @@ console.log(result); // Expected output: 6
 ```
 
 ## 3. Factorial
+
 Write a function `factorial(n)` that takes in a positive integer `n` and returns its factorial.
 
 The factorial of a number is the product of all positive integers from `1` to `n`.
@@ -78,10 +80,12 @@ Note that this solution assumes that `n` is a positive integer. If `n` is `0` or
 
 ## 4. Calculate Sum and Average
 
-Write a JavaScript function `calculate` that takes an array of numbers as input and returns an object with two properties: `sum` and `average`. The `sum` property should be the total sum of all the numbers in the array, and the `average` property should be the average of all the numbers in the array. 
+Write a JavaScript function `calculate` that takes an array of numbers as input and returns an object with two properties: `sum` and `average`. The `sum` property should be the total sum of all the numbers in the array, and the `average` property should be the average of all the numbers in the array.
 
 ### Inputs and Outputs:
+
 #### Example 1:
+
 ```js
 const numbers = [1, 2, 3, 4, 5];
 const result = calculate(numbers);
@@ -89,6 +93,7 @@ console.log(result); // { sum: 15, average: 3 }
 ```
 
 #### Example 2:
+
 ```js
 const numbers = [10, 20, 30, 40, 50];
 const result = calculate(numbers);
@@ -97,11 +102,11 @@ console.log(result); // { sum: 150, average: 30 }
 
 In this solution, we're using a `for` loop to iterate over the array and add each number to a running total `sum`. We then divide the sum by the length of the array to calculate the average. Finally, we return an object with the `sum`∫ and `average`∫ properties.
 
-
 ## 5. Filter books
-In this exercise, the `getBooksByAuthor` function is designed to take an array of book objects and an author name as input. 
 
-It returns an array of book objects from the input array that were written by the specified author. In the example above, the `getBooksByAuthor` function is called with the `books` array and the author name "Jane Austen". 
+In this exercise, the `getBooksByAuthor` function is designed to take an array of book objects and an author name as input.
+
+It returns an array of book objects from the input array that were written by the specified author. In the example above, the `getBooksByAuthor` function is called with the `books` array and the author name "Jane Austen".
 
 The expected output is an array containing a single object, `{ title: "Pride and Prejudice", author: "Jane Austen", year: 1813 }`, which is the only book in the input array that was written by Jane Austen.
 
@@ -121,7 +126,7 @@ const books = [
 
 // Define a function that takes an array of books and an author name as input and returns an array of book objects by that author.
 function getBooksByAuthor(booksArray, authorName) {
-	/* TODO: Implement the book filtering */
+  /* TODO: Implement the book filtering */
 }
 
 // Call the function with the books array and the author name to search for.
@@ -129,33 +134,36 @@ const result = getBooksByAuthor(books, "Jane Austen");
 
 // Log the result to the console.
 console.log(result); // Expected output: { title: "Pride and Prejudice", author: "Jane Austen", year: 1813 }
-
 ```
 
-## 6. All Students Grades 
+## 6. All Students Grades
+
 You are given an array of objects representing students' grades. Write a function `calculateAverageGrade` that takes in this array and returns the average grade for all students.
 
 Each object in the input array has two properties:
+
 - `name`: the name of the student (a string)
 - `grades`: an array of numbers representing the student's grades
 
 ### Inputs
+
 ```javascript
 const grades1 = [
-  { name: 'John', grades: [80, 90, 100] },
-  { name: 'Jane', grades: [75, 85, 95] },
-  { name: 'Bob', grades: [60, 70, 80] }
+  { name: "John", grades: [80, 90, 100] },
+  { name: "Jane", grades: [75, 85, 95] },
+  { name: "Bob", grades: [60, 70, 80] },
 ];
 
 const grades2 = [
-  { name: 'Alice', grades: [90, 95] },
-  { name: 'Bill', grades: [80, 85] },
-  { name: 'Cathy', grades: [70, 75] },
-  { name: 'Dave', grades: [60, 65] },
+  { name: "Alice", grades: [90, 95] },
+  { name: "Bill", grades: [80, 85] },
+  { name: "Cathy", grades: [70, 75] },
+  { name: "Dave", grades: [60, 65] },
 ];
 ```
 
 ### Expected Outputs
+
 ```javascript
 calculateAverageGrade(grades1); // 83.3
 calculateAverageGrade(grades2); // 77.5
@@ -164,80 +172,3 @@ calculateAverageGrade(grades2); // 77.5
 In this exercise, the inputs are two arrays of objects (`grades1` and `grades2`) representing students and their grades.
 
 The expected output for `calculateAverageGrade(grades1)` is `83.3` because the average of `[80, 90, 100]`, `[75, 85, 95]`, and `[60, 70, 80]` is `83.3`. Similarly, the expected output for `calculateAverageGrade(grades2)` is `77.5` because the average of `[90, 95]`, `[80, 85]`, `[70, 75]`, and `[60, 65]` is `77.5`.
-
-
-## Solutions
-
-### 1. Calculate Total Order Price
-This function simply iterates over the order array and adds up the price of each item to a running total price. Once all items have been added up, it returns the total price. This exercise uses basic concepts of arrays, objects, functions and iterators.
-
-```js
-function calculateTotalPrice(order) {
-  let totalPrice = 0;
-  for (let i = 0; i < order.length; i++) {
-    totalPrice += order[i].price;
-  }
-  return totalPrice;
-}
-```
-
-### 2. Sum even numbers
-```javascript
-function sumEvenNumbers(numbersArray) {
-  let sum = 0;
-  for (let i = 0; i < numbersArray.length; i++) {
-    if (numbersArray[i] % 2 === 0) {
-      sum += numbersArray[i];
-    }
-  }
-  return sum;
-}
-```
-
-### 2. Factorial
-```js
-function factorial(n) {
-  let result = 1;
-  for (let i = 1; i <= n; i++) {
-    result *= i;
-  }
-  return result;
-}
-```
-
-### 3. Calculate Sum and Average
-```js
-function calculate(numbers) {
-  let sum = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
-  }
-  const average = sum / numbers.length;
-  return { sum, average };
-}
-```
-
-### 4. Filter Books
-```js
-function getBooksByAuthor(booksArray, authorName) {
-  return booksArray.filter((book) => book.author === authorName);
-}
-```
-
-### 5. All Students grades
-To solve this exercise, you can use a loop to iterate through the array of objects and calculate the average grade for each student using another loop to iterate through the `grades` array. You can then sum all the averages and divide by the length of the array to get the overall average.
-
-```javascript
-function calculateAverageGrade(grades) {
-  let total = 0;
-  for (let i = 0; i < grades.length; i++) {
-    let studentTotal = 0;
-    for (let j = 0; j < grades[i].grades.length; j++) {
-      studentTotal += grades[i].grades[j];
-    }
-    const studentAvg = studentTotal / grades[i].grades.length;
-    total += studentAvg;
-  }
-  return total / grades.length;
-}
-```
