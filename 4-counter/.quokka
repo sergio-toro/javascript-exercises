@@ -1,0 +1,22 @@
+{
+  "plugins": [
+    "jsdom-quokka-plugin"
+  ],
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "usage",
+          "corejs": "3",
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "@babel/plugin-syntax-top-level-await"
+    ]
+  }
+}
