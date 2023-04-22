@@ -80,7 +80,7 @@ Hints:
         console.log(this.querySelector('span'))
         console.log(event.target.classList)
       });
-    ```
+  ```
 
 3. **Write a function to handle removing items** - When an item is removed, you'll need to remove its corresponding HTML element from the DOM, and update any data structures or variables used to keep track of the list of TODO items.
 
