@@ -75,7 +75,7 @@ Hints:
 2. **As this may be a bit difficult, I recommend you to inspect these values:**
   ```js
     document.querySelector('.todo-item')
-      .addEventListener('click', function(e) {
+      .addEventListener('click', function(event) {
         console.log(this)
         console.log(this.querySelector('span'))
         console.log(event.target.classList)
@@ -115,10 +115,10 @@ Hints:
 2. **As this may be a bit difficult, I recommend you to inspect these values:**
     ```js
     document.querySelector('.todo-item')
-      .addEventListener('change', function(e) {
+      .addEventListener('change', function(event) {
         console.log(this)
         console.log(this.querySelector('span'))
-        console.log(e.target.value)
+        console.log(event.target.value)
       });
     ```
 
